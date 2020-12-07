@@ -1,16 +1,17 @@
 package com.company.models.actors;
 
 import com.company.models.Constants;
+import com.company.models.Gate;
 import com.company.models.ParkingTicket;
 import com.company.models.payment.Payment;
 import com.company.models.vehicles.Vehicle;
 import com.company.utils.DateUtils;
-import enums.ParkingTicketStatus;
+import com.company.enums.ParkingTicketStatus;
 
 import java.util.Date;
 
 public class ParkingAttendant extends Person{
-
+    private Gate gate;
     public void processTicket(Vehicle vehicle){
         ParkingTicket ticket = vehicle.getTicket();
         Date date =new Date();
@@ -25,6 +26,11 @@ public class ParkingAttendant extends Person{
         }
         return;
     }
+
+    public void setGate(Gate gate) {
+        this.gate = gate;
+    }
+
     public void assignTicket(Vehicle vehicle){
         ParkingTicket ticket =new ParkingTicket();
         vehicle.setTicket(ticket);
@@ -33,4 +39,7 @@ public class ParkingAttendant extends Person{
 
     }
 
+    public Gate getGate() {
+       return gate;
+    }
 }

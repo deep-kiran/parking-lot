@@ -1,6 +1,6 @@
 package com.company.models.payment;
 
-import enums.PaymentType;
+import com.company.enums.PaymentType;
 
 public class DebitCardPayment extends Payment{
 

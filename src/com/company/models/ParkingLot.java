@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class ParkingLot extends Auditable{
-    public static int fineRate;
-    public static int rate;
-    Address address;
+    private static int fineRate;
+    private static int rate;
+    private Address address;
     private static ArrayList<ParkingFloor> parkingFloors;
 
     private static HashMap<VehicleType,ParkingSlotType> vehicleToParkingSlotMap;
@@ -49,9 +49,15 @@ public class ParkingLot extends Auditable{
         parkingFloors.add(floor);
     }
 
-    public static void addParkingAttendant(ParkingAttendant attendant) {
-
+    public static void addParkingAttendant(Gate gate,ParkingAttendant attendant) {
+        gate.setParkingAttendant(attendant);
+        attendant.setGate(gate);
     }
+    public static void removeParkingAttendant(ParkingAttendant attendant) {
+        Gate gate = attendant.getGate();
+        gate.setParkingAttendant(null);
+    }
+
 
     public static void addEntrancePanel( EntrancePoint point) {
         gates.add(point);

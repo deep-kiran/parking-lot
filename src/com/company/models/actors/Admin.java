@@ -19,8 +19,8 @@ public class Admin extends Person {
     public void addParkingFloor(ParkingFloor floor){
         ParkingLot.addParkingFloor(floor);
     }
-    public void addParkingAttendant(ParkingFloor floor,ParkingAttendant attendant){
-        ParkingLot.addParkingAttendant(attendant);
+    public void addParkingAttendant(Gate gate,ParkingAttendant attendant){
+        ParkingLot.addParkingAttendant(gate,attendant);
         return ;
     }
     public void addEntrancePanel(EntrancePoint point){

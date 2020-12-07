@@ -19,7 +19,7 @@ public class ParkingFloor extends Auditable {
     }
 
     public boolean isFull(ParkingSlotType type) {
-        return (parkingSlots.size()==0);
+        return (parkingSlots.get(type).size()==0);
     }
     public void populateMap(ParkingSlot slot){
         if (!parkingSlots.containsKey(slot.getType()))

@@ -1,7 +1,6 @@
 package com.company.models;
 
-import enums.ParkingTicketStatus;
-import com.company.models.parkingslots.ParkingSlot;
+import com.company.enums.ParkingTicketStatus;
 
 public class ParkingTicket extends Auditable{
     private String ticketNumber;
