@@ -5,9 +5,6 @@ import java.util.HashMap;
 public class Constants {
     private static HashMap<String,String> constantsMap =new HashMap<>();
 
-    public Constants(){
-        loadFromDB();
-    }
 
     public static void setFineRate(int r) {
         constantsMap.put("fineRate",String.valueOf(r));
@@ -18,9 +15,10 @@ public class Constants {
 
     }
 
-    public void loadFromDB(){
-
+    public static void setParkingRate(int rate) {
+        constantsMap.put("rate",String.valueOf(rate));
     }
+
     public static int getFineRate(){
         return Integer.parseInt(constantsMap.getOrDefault("fineRate","14"));
     }

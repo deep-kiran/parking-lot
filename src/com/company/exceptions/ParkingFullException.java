@@ -1,4 +1,4 @@
 package com.company.exceptions;
 
-public class ParkingFullException extends Exception{
+public class ParkingFullException extends RuntimeException{
 }
